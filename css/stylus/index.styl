@@ -1,6 +1,7 @@
 
 $white = #fff
 $black = black
+$lime = #8bd746
 $green = #33a07f
 
 $media = {
@@ -25,12 +26,33 @@ body
 @import 'navbar.styl'
 @import 'header.styl'
 
-.coming-soon
-    background-color: $green
+.section
     padding-top: $margin.max
     padding-bottom: $margin.max
+    &.lime
+        background-color: $lime
+    &.green
+        background-color: $green
     p
         color: $white
         font-size: 24px
-        font-weight: 700
+        font-weight: 600
         text-align: center
+    a
+        background-color: $lime;
+        border-radius: 4px;
+
+        color: $white;
+        font-size: 20px;
+        font-weight: 700;
+
+        padding: 16px 20px;
+        margin: 20px 0;
+
+        &:hover
+            background-color: darken($lime, 10%)
+
+    .compress
+        display: flex;
+        flex-direction: column;
+        align-items: center;

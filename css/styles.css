@@ -40,10 +40,11 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-.navbar .compress h1 {
-  color: #fff;
-  font-size: 36px;
-  font-weight: 700;
+.navbar .compress .logo {
+  height: 48px;
+}
+.navbar .compress .logo img {
+  height: 100%;
 }
 .navbar .compress .links {
   display: flex;
@@ -92,14 +93,36 @@ a {
   font-size: 22px;
   line-height: 1.8;
 }
-.coming-soon {
-  background-color: #33a07f;
+.section {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.coming-soon p {
+.section.lime {
+  background-color: #8bd746;
+}
+.section.green {
+  background-color: #33a07f;
+}
+.section p {
   color: #fff;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
+}
+.section a {
+  background-color: #8bd746;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+.section a:hover {
+  background-color: #7cd22f;
+}
+.section .compress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
