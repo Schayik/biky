@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+.compress {
+  max-width: 1440px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 0 auto;
+}
+.navbar {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.navbar .compress {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .compress h1 {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+}
+.navbar .compress .links {
+  display: flex;
+}
+.navbar .compress .links a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 40px;
+}
+.navbar .compress .links a:last-child {
+  margin-right: 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  min-height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.header .opacity-layer {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.2;
+  height: 100%;
+  width: 100%;
+}
+.header h1,
+.header p {
+  position: relative;
+  color: #fff;
+  max-width: 780px;
+  text-align: center;
+}
+.header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.header p {
+  font-size: 22px;
+  line-height: 1.8;
+}
+.coming-soon {
+  background-color: #33a07f;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.coming-soon p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}

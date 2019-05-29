@@ -1,0 +1,36 @@
+
+$white = #fff
+$black = black
+$green = #33a07f
+
+$media = {
+    max: 1440px
+}
+
+$margin = {
+    max: 100px
+}
+
+*
+    box-sizing: border-box
+
+html
+    scroll-behavior: smooth
+
+body
+    margin: 0
+
+@import 'text.styl'
+@import 'page.styl'
+@import 'navbar.styl'
+@import 'header.styl'
+
+.coming-soon
+    background-color: $green
+    padding-top: $margin.max
+    padding-bottom: $margin.max
+    p
+        color: $white
+        font-size: 24px
+        font-weight: 700
+        text-align: center
