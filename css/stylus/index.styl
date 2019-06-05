@@ -1,8 +1,8 @@
 
 $white = #fff
 $black = black
-$lime = #8bd746
-$green = #33a07f
+$green = #00d803
+$light-green = #daf9d9
 
 $media = {
     max: 1440px
@@ -12,47 +12,12 @@ $margin = {
     max: 100px
 }
 
-*
-    box-sizing: border-box
-
-html
-    scroll-behavior: smooth
-
-body
-    margin: 0
-
 @import 'text.styl'
+@import 'buttons.styl'
+
 @import 'page.styl'
+
 @import 'navbar.styl'
 @import 'header.styl'
-
-.section
-    padding-top: $margin.max
-    padding-bottom: $margin.max
-    &.lime
-        background-color: $lime
-    &.green
-        background-color: $green
-    p
-        color: $white
-        font-size: 24px
-        font-weight: 600
-        text-align: center
-    a
-        background-color: $lime;
-        border-radius: 4px;
-
-        color: $white;
-        font-size: 20px;
-        font-weight: 700;
-
-        padding: 16px 20px;
-        margin: 20px 0;
-
-        &:hover
-            background-color: darken($lime, 10%)
-
-    .compress
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+@import 'image-background'
+@import 'white-background'

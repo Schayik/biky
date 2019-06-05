@@ -1,3 +1,29 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button {
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #00d803;
+  color: #fff;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 20px;
+}
 * {
   box-sizing: border-box;
 }
@@ -6,28 +32,17 @@ html {
 }
 body {
   margin: 0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a {
-  color: #000;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  font-weight: 400;
-}
-a {
-  text-decoration: none;
+  background-color: #fff;
 }
 .compress {
   max-width: 1440px;
   padding-left: 100px;
   padding-right: 100px;
   margin: 0 auto;
+}
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .navbar {
   position: absolute;
@@ -58,10 +73,6 @@ a {
   margin-right: 0;
 }
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   position: relative;
   height: 100vh;
   min-height: 400px;
@@ -76,53 +87,51 @@ a {
   height: 100%;
   width: 100%;
 }
-.header h1,
-.header p {
+.header .compress {
   position: relative;
+  height: 100%;
+}
+.header .compress .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  max-width: 400px;
+}
+.header .compress .content h1,
+.header .compress .content p {
   color: #fff;
   max-width: 780px;
-  text-align: center;
 }
-.header h1 {
+.header .compress .content h1 {
   font-size: 42px;
   font-weight: 700;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-.header p {
+.header .compress .content p {
   font-size: 22px;
   line-height: 1.8;
 }
-.section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+.section.background-image {
+  background-size: cover;
+  background-position: center;
+  min-height: calc(0.5 * 100vw);
 }
-.section.lime {
-  background-color: #8bd746;
-}
-.section.green {
-  background-color: #33a07f;
-}
-.section p {
+.section.background-image h1,
+.section.background-image p {
   color: #fff;
-  font-size: 24px;
-  font-weight: 600;
-  text-align: center;
 }
-.section a {
-  background-color: #8bd746;
-  border-radius: 4px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  padding: 16px 20px;
-  margin: 20px 0;
+.section.background-image .content {
+  max-width: 400px;
 }
-.section a:hover {
-  background-color: #7cd22f;
+.section.white-background {
+  background-color: #fff;
 }
-.section .compress {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.section.white-background h1 {
+  color: #00d803;
+}
+.section.white-background p {
+  color: #000;
 }

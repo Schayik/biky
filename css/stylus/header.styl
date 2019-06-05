@@ -1,9 +1,5 @@
 
 .header
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
     position: relative
     height: 100vh
     min-height: 400px
@@ -18,18 +14,28 @@
         height: 100%
         width: 100%
 
-    h1, p
+    .compress
         position: relative
-        color: $white
-        max-width: 780px
-        text-align: center
+        height: 100%
 
-    h1
-        font-size: 42px
-        font-weight: 700
-        line-height: 1.5
-        margin-bottom: 20px
+        .content
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+            height: 100%
+            max-width: 400px
 
-    p
-        font-size: 22px
-        line-height: 1.8
+            h1, p
+                color: $white
+                max-width: 780px
+
+            h1
+                font-size: 42px
+                font-weight: 700
+                line-height: 1.5
+                margin-bottom: 20px
+
+            p
+                font-size: 22px
+                line-height: 1.8
