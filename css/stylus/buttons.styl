@@ -1,6 +1,6 @@
 
-a
-    display: flex
+a.button
+    display: inline-flex
     align-items: center
     position: relative
     background-color: $green
@@ -8,3 +8,22 @@ a
     height: 40px
     border-radius: .5 * @height
     padding: 0 20px
+    text-decoration: none
+    font-size: 20px
+
+    &.on-top
+        z-index: 1
+
+    &.behind
+        color: $green
+        background-color: $light-green
+        margin-left: -16px
+        padding-left: 32px
+
+
+
+
+.double-buttons
+    display: flex
+    justify-content: center
+    margin-top: 24px

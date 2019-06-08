@@ -14,7 +14,17 @@ body
     padding-left: $margin.max
     padding-right: $margin.max
     margin: 0 auto
+    height: 100%
 
 .section
     padding-top: $margin.max
     padding-bottom: $margin.max
+
+.opacity-layer
+    position: absolute
+    background-color: $black
+    opacity: .2
+    height: 100%
+    width: 100%
+    & ~ div
+        position: relative
