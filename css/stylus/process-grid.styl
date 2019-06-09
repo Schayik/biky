@@ -1,11 +1,21 @@
 
 .process-grid
+    margin-top: 52px
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-gap: 20px 40px
+    grid-gap: 0 32px
+    grid-template-areas: 'empty arrow arrow arrow'
+    .arrow
+        grid-area: arrow
+        display: flex
+        justify-content: center
+        img
+            width: 100%
+
     svg
-        width: 120px
-        height: 120px
+        width: 150px
+        // height: 120px
+        margin-bottom: 20px
     h2
         color: $green
         font-size: 21px
@@ -19,3 +29,5 @@
 
         a
             color: $green
+            &:hover
+                color: darken($green, 10%)

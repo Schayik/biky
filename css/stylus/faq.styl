@@ -11,16 +11,24 @@
         max-width: 560px
         .question
             margin-bottom: 20px
+            overflow: hidden
             &:last-child
                 margin-bottom: 0
 
-        h2
-            color: $green
-            font-size: 21px
-            margin-bottom: 8px
-        p
-            font-size: 15px
-            line-height: 1.6
+            h2
+                color: $green
+                font-size: 21px
+                margin-bottom: 8px
+                &:hover
+                    cursor: pointer
 
+            p
+                font-size: 15px
+                line-height: 1.6
+                max-height: 0
+                transition: max-height .3s ease-out
+            &.show p
+                max-height: 52px
+                transition: max-height .3s ease-in
     a
         margin-top: 48px

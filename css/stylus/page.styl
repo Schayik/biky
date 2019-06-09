@@ -8,6 +8,8 @@ html
 body
     margin: 0
     background-color: $white
+    display: flex
+    flex-direction: column
 
 .compress
     max-width: $media.max
@@ -15,6 +17,9 @@ body
     padding-right: $margin.max
     margin: 0 auto
     height: 100%
+    @media (max-width: $media.large)
+        padding-left: $margin.large
+        padding-right: $margin.large
 
 .section
     padding-top: $margin.max

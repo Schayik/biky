@@ -13,8 +13,9 @@
         h2
             color: $green
             font-size: 21px
-        p
+        h3
             color: $green
+            font-family: $font
             font-size: 17px
             font-weight: 500
             font-style: italic
@@ -23,3 +24,7 @@
     p
         font-size: 15px
         font-weight: 500
+        line-height: 1.6
+
+    @media(max-width: $media.max)
+        grid-column-gap: 32px

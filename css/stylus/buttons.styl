@@ -1,5 +1,9 @@
 
+a
+    text-decoration: none
+
 a.button
+    flex-shrink: 0
     display: inline-flex
     align-items: center
     position: relative
@@ -8,8 +12,9 @@ a.button
     height: 40px
     border-radius: .5 * @height
     padding: 0 20px
-    text-decoration: none
     font-size: 20px
+    &:hover
+        background-color: darken($green, 5%)
 
     &.on-top
         z-index: 1
@@ -19,9 +24,8 @@ a.button
         background-color: $light-green
         margin-left: -16px
         padding-left: 32px
-
-
-
+        &:hover
+            background-color: darken($light-green, 5%)
 
 .double-buttons
     display: flex
