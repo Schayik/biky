@@ -1,34 +1,46 @@
 
-.header
-    position: relative
-    min-height: 100vh
-    width: 100%
-    background-size: cover
-    background-position: center
+.background-image.header
+    .content
+        min-height: 100vh
+        h1
+            font-size: 53px
+            @media(max-width: $media.small)
+                font-size: 32px
+    // .section
+    //     min-height: 100vh
 
-    .compress
-        position: relative
-        height: 100%
 
-        .content
-            display: flex
-            flex-direction: column
-            justify-content: center
-            align-items: flex-start
-            height: 100%
-            max-width: 480px
 
-            h1, p
-                color: $white
-
-            h1
-                font-size: 52px
-                line-height: 1.08
-
-            p
-                margin-top: 36px
-                font-size: 22px
-                line-height: 1.8
-
-            a
-                margin-top: 36px
+// .header
+//     position: relative
+//     min-height: 100vh
+//     width: 100%
+//     background-size: cover
+//     background-position: center
+//
+//     .compress
+//         position: relative
+//         height: 100%
+//
+//         .content
+//             display: flex
+//             flex-direction: column
+//             justify-content: center
+//             align-items: flex-start
+//             height: 100%
+//             max-width: 480px
+//
+//             h1, p
+//                 color: $white
+//
+//             h1
+//                 font-size: 52px
+//                 line-height: 1.08
+//
+//             p
+//                 margin-top: 36px
+//                 font-size: 22px
+//                 line-height: 1.8
+//
+//             a
+//                 margin-top: 36px

@@ -5,9 +5,10 @@
     padding-bottom: 40px
 
     .wrapper
+        min-height: calc(.15 * 100vw)
         display: grid
         grid-template-columns: 1fr 1fr 1fr
-        grid-column-gap: 48px
+        grid-gap: 32px 48px
 
         h2
             color: $white
@@ -19,3 +20,11 @@
             margin-top: 8px
             &:hover
                 color: darken($white, 5%)
+
+    @media(max-width: $media.medium)
+        .wrapper
+            grid-template-columns: 1fr 1fr
+
+    @media(max-width: $media.small)
+        .wrapper
+            grid-template-columns: 1fr

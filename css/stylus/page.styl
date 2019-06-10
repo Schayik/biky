@@ -10,6 +10,7 @@ body
     background-color: $white
     display: flex
     flex-direction: column
+    width: 100vw
 
 .compress
     max-width: $media.max
@@ -17,18 +18,34 @@ body
     padding-right: $margin.max
     margin: 0 auto
     height: 100%
-    @media (max-width: $media.large)
+    @media (max-width: $media.xl)
         padding-left: $margin.large
         padding-right: $margin.large
+    @media (max-width: $media.large)
+        padding-left: $margin.medium
+        padding-right: $margin.medium
+    @media (max-width: $media.small)
+        padding-left: $margin.small
+        padding-right: $margin.small
 
 .section
     padding-top: $margin.max
     padding-bottom: $margin.max
+    @media (max-width: $media.large)
+        padding-top: $margin.large
+        padding-bottom: $margin.large
+    // @media (max-width: $media.small)
+    //     padding-top: $margin.medium
+    //     padding-bottom: $margin.medium
 
 .opacity-layer
     position: absolute
     background-color: $black
     opacity: .2
+    // top: 0
+    // left: 0
+    // right: 0
+    // bottom: 0
     height: 100%
     width: 100%
     & ~ div

@@ -9,17 +9,24 @@ a.button
     position: relative
     background-color: $green
     color: $white
-    height: 40px
-    border-radius: .5 * @height
-    padding: 0 20px
+    // height: 40px
     font-size: 20px
+    padding: 8px 20px
+    border-radius: .5 * (20px + 2 * 8px)
     &:hover
         background-color: darken($green, 5%)
+        cursor: pointer
 
-    &.on-top
+.double-buttons
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    margin-top: 24px
+
+    .on-top
         z-index: 1
 
-    &.behind
+    .behind
         color: $green
         background-color: $light-green
         margin-left: -16px
@@ -27,7 +34,10 @@ a.button
         &:hover
             background-color: darken($light-green, 5%)
 
-.double-buttons
-    display: flex
-    justify-content: center
-    margin-top: 24px
+    @media(max-width: $media.small)
+        flex-direction: column
+        align-items: flex-start
+        .behind
+            margin-left: 0
+            padding-left: 20px
+            margin-top: 12px

@@ -7,7 +7,7 @@
         font-size: 41px
 
     .questions
-        margin-top: 56px
+        margin-top: $margin.large
         max-width: 560px
         .question
             margin-bottom: 20px
@@ -28,7 +28,13 @@
                 max-height: 0
                 transition: max-height .3s ease-out
             &.show p
-                max-height: 52px
+                max-height: 80px
                 transition: max-height .3s ease-in
     a
         margin-top: 48px
+
+    @media(max-width: $media.small)
+        .questions
+            margin-top: $margin.medium
+            .question.show p
+                max-height: 160px

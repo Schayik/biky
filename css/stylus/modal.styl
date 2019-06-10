@@ -1,0 +1,30 @@
+
+.modal
+    position: fixed
+    z-index: 3
+    background-color: rgba(0,0,0,.5)
+    height: 100vh
+    width: 100vw
+    display: none
+    justify-content: center
+    align-items: center
+    &.show
+        display: flex
+    .content
+        position: relative
+        background-color: $white
+        border-radius: 12px
+        padding: $margin.medium
+        svg
+            width: 16px
+            &:hover
+                cursor: pointer
+                fill: lighten($black, 20%)
+
+        label
+            display: inline-block
+            font-size: 15px
+            margin-top: 12px
+
+        input
+            display: block

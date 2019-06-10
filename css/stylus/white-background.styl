@@ -4,8 +4,8 @@
     display: flex
     align-items: center
     background-color: $white
-    padding-top: 100px
-    padding-bottom: 60px
+    padding-top: $margin.max
+    padding-bottom: $margin.large
     min-height: calc(.4 * 100vw)
     .heading-subheading
         h1
@@ -17,3 +17,10 @@
             color: $black
             font-size: 24px
             text-align: center
+
+    .double-buttons
+        align-items: center
+
+    @media(max-width: $media.small)
+        padding-top: $margin.large
+        padding-bottom: $margin.medium

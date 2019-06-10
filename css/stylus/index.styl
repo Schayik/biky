@@ -6,12 +6,17 @@ $light-green = #c4ffc5
 
 $media = {
     max: 1366px - 1px
-    large: 1200px
+    xl: 1200px - 1px
+    large: 1024px - 1px
+    medium: 768px - 1px
+    small: 576px - 1px
 }
 
 $margin = {
     max: 100px
     large: 64px
+    medium: 32px
+    small: 16px
 }
 
 $font = 'Montserrat', sans-serif
@@ -19,15 +24,18 @@ $header-font = 'Baloo', cursive
 
 @import 'text.styl'
 @import 'buttons.styl'
+@import 'input.styl'
 
 @import 'page.styl'
 
 @import 'navbar.styl'
-@import 'header.styl'
-@import 'image-background'
+@import 'background-image'
 @import 'white-background'
+@import 'header.styl'
 @import 'footer.styl'
+
 
 @import 'process-grid'
 @import 'pros-grid'
 @import 'faq'
+@import 'modal.styl'

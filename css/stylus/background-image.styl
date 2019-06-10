@@ -3,13 +3,13 @@
     position: relative
     background-size: cover
     background-position: center
-    min-height: 100vh
+    // min-height: 100vh
 
     .opacity-layer
         opacity: .4
 
     .content
-        height: 100%
+        min-height: 100vmin
         display: flex
         flex-direction: column
         justify-content: center
@@ -25,6 +25,7 @@
             color: $white
             font-size: 25px
             line-height: 1.7
+            margin-top: 36px
 
         a
             margin-top: 36px
@@ -32,3 +33,19 @@
         &.nr3
             p
                 font-size: 20px
+
+    .double-buttons
+        margin-top: 0
+        .behind
+            margin-top: 12px
+
+    @media(max-width: $media.small)
+        .content
+            max-width: 300px
+            h1
+                font-size: 32px
+            p
+                font-size: 21px
+                margin-top: 20px
+            a
+                margin-top: 20px

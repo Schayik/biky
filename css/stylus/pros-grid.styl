@@ -1,12 +1,13 @@
 
 .pros-grid
-    margin-top: 88px
+    margin-top: $margin.large
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-areas: "icon-1 icon-2 icon-3 icon-4" "heading-1 heading-2 heading-3 heading-4" "text-1 text-2 text-3 text-4"
     grid-column-gap: 48px
     svg
         width: 120px
-        height: 120px
+        // height: 120px
     .grid-heading
         margin-top: 32px
         margin-bottom: 8px
@@ -28,3 +29,22 @@
 
     @media(max-width: $media.max)
         grid-column-gap: 32px
+
+    @media(max-width: $media.large)
+        grid-template-columns: 1fr 1fr
+        grid-template-areas: "icon-1 icon-2" "heading-1 heading-2" "text-1 text-2" "icon-3 icon-4" "heading-3 heading-4" "text-3 text-4"
+        .grid-heading
+            margin-top: 12px
+        p
+            margin-bottom: 20px
+
+    @media(max-width: $media.small)
+        margin-top: $margin.medium
+        grid-template-columns: 1fr
+        grid-template-areas: "icon-1" "heading-1" "text-1" "icon-2" "heading-2" "text-2" "icon-3" "heading-3" "text-3" "icon-4" "heading-4" "text-4"
+        & > div
+            display: flex
+            flex-direction: column
+            align-items: center
+        h2, h3, p
+            text-align: center
