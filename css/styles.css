@@ -29,9 +29,6 @@ h5,
 h6 {
   font-family: 'Baloo', cursive;
 }
-p {
-  font-weight: 300;
-}
 a {
   text-decoration: none;
 }
@@ -104,6 +101,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  overflow-x: hidden;
 }
 .compress {
   max-width: 1365px;
@@ -196,6 +194,10 @@ body {
 }
 .background-image .content h1 {
   color: #fff;
+  font-size: 53px;
+}
+.background-image .content h2 {
+  color: #fff;
   font-size: 42px;
   line-height: 1.4;
 }
@@ -221,7 +223,8 @@ body {
   .background-image .content {
     max-width: 300px;
   }
-  .background-image .content h1 {
+  .background-image .content h1,
+  .background-image .content h2 {
     font-size: 32px;
   }
   .background-image .content p {
@@ -240,7 +243,11 @@ body {
   padding-bottom: 64px;
   min-height: calc(0.4 * 100vw);
 }
-.white-background .heading-subheading h1 {
+.white-background p {
+  font-weight: 500;
+  line-height: 1.6;
+}
+.white-background .heading-subheading h2 {
   color: #00d802;
   font-size: 44px;
   text-align: center;
@@ -263,14 +270,6 @@ body {
 .background-image.header .content {
   min-height: 100vh;
 }
-.background-image.header .content h1 {
-  font-size: 53px;
-}
-@media (max-width: 575px) {
-  .background-image.header .content h1 {
-    font-size: 32px;
-  }
-}
 .footer {
   background-color: #00d802;
   padding-top: 40px;
@@ -282,7 +281,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 32px 48px;
 }
-.footer .wrapper h2 {
+.footer .wrapper h3 {
   color: #fff;
   font-size: 21px;
 }
@@ -324,7 +323,7 @@ body {
   width: 120px;
   margin-bottom: 20px;
 }
-.process-grid h2 {
+.process-grid h3 {
   color: #00d802;
   font-size: 21px;
   line-height: 1;
@@ -420,10 +419,10 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .process-grid .text-1 h2,
-  .process-grid .text-2 h2,
-  .process-grid .text-3 h2,
-  .process-grid .text-4 h2,
+  .process-grid .text-1 h3,
+  .process-grid .text-2 h3,
+  .process-grid .text-3 h3,
+  .process-grid .text-4 h3,
   .process-grid .text-1 p,
   .process-grid .text-2 p,
   .process-grid .text-3 p,
@@ -452,11 +451,11 @@ body {
   margin-top: 32px;
   margin-bottom: 8px;
 }
-.pros-grid .grid-heading h2 {
+.pros-grid .grid-heading h3 {
   color: #00d802;
   font-size: 21px;
 }
-.pros-grid .grid-heading h3 {
+.pros-grid .grid-heading h4 {
   color: #00d802;
   font-family: 'Montserrat', sans-serif;
   font-size: 17px;
@@ -507,7 +506,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.faq h1 {
+.faq h2 {
   color: #00d802;
   font-size: 41px;
 }
@@ -522,12 +521,12 @@ body {
 .faq .questions .question:last-child {
   margin-bottom: 0;
 }
-.faq .questions .question h2 {
+.faq .questions .question h3 {
   color: #00d802;
   font-size: 21px;
   margin-bottom: 8px;
 }
-.faq .questions .question h2:hover {
+.faq .questions .question h3:hover {
   cursor: pointer;
 }
 .faq .questions .question p {
