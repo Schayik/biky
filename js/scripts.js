@@ -15,6 +15,6 @@ const openModal = () => {
 }
 
 const closeModal = () => {
-  document.body.style.overflow = 'auto'
+  document.body.style.overflow = ''
   modal.classList.remove('show')
 }

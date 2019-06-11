@@ -1,15 +1,71 @@
 
 .pros-grid
     margin-top: $margin.large
+    display: -ms-grid // ie
+    -ms-grid-columns: 1fr 1fr 1fr 1fr // ie
     display: grid
     grid-template-columns: 1fr 1fr 1fr 1fr
     grid-template-areas: "icon-1 icon-2 icon-3 icon-4" "heading-1 heading-2 heading-3 heading-4" "text-1 text-2 text-3 text-4"
     grid-column-gap: 48px
+
+    .icon-1, .icon-2, .icon-3, .icon-4
+        display: flex
+        align-items: flex-end
+    .icon-1
+        grid-area: icon-1
+        img
+            width: 100px
+    .icon-2
+        grid-area: icon-2
+        img
+            width: 80px
+    .icon-3
+        grid-area: icon-3
+        img
+            width: 80px
+    .icon-4
+        grid-area: icon-4
+        img
+            width: 100px
+
+    // ie
+    .icon-1, .icon-2, .icon-3, .icon-4
+        -ms-grid-row: 1
+    .heading-1, .heading-2, .heading-3, .heading-4
+        -ms-grid-row: 2
+    .text-1, .text-2, .text-3, .text-4
+        -ms-grid-row: 3
+    .icon-1, .heading-1, .text-1
+        -ms-grid-column: 1
+    .icon-2, .heading-2, .text-2
+        -ms-grid-column: 2
+    .icon-3, .heading-3, .text-3
+        -ms-grid-column: 3
+    .icon-4, .heading-4, .text-4
+        -ms-grid-column: 4
+
+    .heading-1
+        grid-area: heading-1
+    .heading-2
+        grid-area: heading-2
+    .heading-3
+        grid-area: heading-3
+    .heading-4
+        grid-area: heading-4
+    .text-1
+        grid-area: text-1
+    .text-2
+        grid-area: text-2
+    .text-3
+        grid-area: text-3
+    .text-4
+        grid-area: text-4
+
     svg
         width: 120px
         // height: 120px
     .grid-heading
-        margin-top: 32px
+        margin-top: 24px
         margin-bottom: 8px
         h3
             color: $green
@@ -18,9 +74,10 @@
             color: $green
             font-family: $font
             font-size: 17px
-            font-weight: 500
+            font-weight: 600
             font-style: italic
-            line-height: 1.6
+            line-height: 1.4
+            margin-top: 8px
 
     p
         font-size: 15px
@@ -42,7 +99,7 @@
         margin-top: $margin.medium
         grid-template-columns: 1fr
         grid-template-areas: "icon-1" "heading-1" "text-1" "icon-2" "heading-2" "text-2" "icon-3" "heading-3" "text-3" "icon-4" "heading-4" "text-4"
-        & > div
+        & > div, .icon-1, .icon-2, .icon-3, .icon-4
             display: flex
             flex-direction: column
             align-items: center
