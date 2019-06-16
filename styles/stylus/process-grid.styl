@@ -84,30 +84,39 @@
         grid-template-columns: auto 1fr 1fr 1fr
 
     @media(max-width: $media.large)
-        grid-template-columns: 1fr 1fr
-        grid-template-areas: "meld-je-aan icon-1" "empty-2 text-1" "icon-2 icon-3" "text-2 text-3"
+        grid-gap: 0 16px
+        svg, img
+            width: 120px
+        p
+            font-size: 14px
+            line-height: 1.4
+            max-width: 400px
+
+    @media(max-width: $media.medium)
+        margin-top: $margin.medium
+        grid-template-columns: 1fr
+        grid-template-areas: "icon-1" "text-1" "icon-2" "text-2" "icon-3" "text-3" "meld-je-aan"
+        .arrow, .empty-1
+            display: none
         .meld-je-aan
+            margin-top: 32px
             display: flex
             flex-direction: column
             justify-content: center
             align-items: center
-        .arrow, .empty-1
-            display: none
-        .text-1
-            margin-bottom: 20px
-
-    @media(max-width: $media.small)
-        grid-template-columns: 1fr
-        grid-template-areas: "meld-je-aan" "icon-1" "text-1" "icon-2" "text-2" "icon-3" "text-3"
         .text-1, .text-2, .text-3, .text-4
             display: flex
             flex-direction: column
             align-items: center
-            h3, p
+            h3
                 text-align: center
+            p
+                text-align: center
+                font-size: 15px
+                line-height: 1.6
+        .text-1, .text-2
+            margin-bottom: 20px
         .icon-1, .icon-2, .icon-3
             justify-content: center
         .empty-2
             display: none
-        .meld-je-aan, .text-2
-            margin-bottom: 20px

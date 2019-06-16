@@ -491,27 +491,34 @@ img {
 }
 @media (max-width: 1023px) {
   .process-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "meld-je-aan icon-1" "empty-2 text-1" "icon-2 icon-3" "text-2 text-3";
+    grid-gap: 0 16px;
   }
-  .process-grid .meld-je-aan {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .process-grid svg,
+  .process-grid img {
+    width: 120px;
+  }
+  .process-grid p {
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 400px;
+  }
+}
+@media (max-width: 767px) {
+  .process-grid {
+    margin-top: 32px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "icon-1" "text-1" "icon-2" "text-2" "icon-3" "text-3" "meld-je-aan";
   }
   .process-grid .arrow,
   .process-grid .empty-1 {
     display: none;
   }
-  .process-grid .text-1 {
-    margin-bottom: 20px;
-  }
-}
-@media (max-width: 575px) {
-  .process-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: "meld-je-aan" "icon-1" "text-1" "icon-2" "text-2" "icon-3" "text-3";
+  .process-grid .meld-je-aan {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .process-grid .text-1,
   .process-grid .text-2,
@@ -524,12 +531,20 @@ img {
   .process-grid .text-1 h3,
   .process-grid .text-2 h3,
   .process-grid .text-3 h3,
-  .process-grid .text-4 h3,
+  .process-grid .text-4 h3 {
+    text-align: center;
+  }
   .process-grid .text-1 p,
   .process-grid .text-2 p,
   .process-grid .text-3 p,
   .process-grid .text-4 p {
     text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .process-grid .text-1,
+  .process-grid .text-2 {
+    margin-bottom: 20px;
   }
   .process-grid .icon-1,
   .process-grid .icon-2,
@@ -538,10 +553,6 @@ img {
   }
   .process-grid .empty-2 {
     display: none;
-  }
-  .process-grid .meld-je-aan,
-  .process-grid .text-2 {
-    margin-bottom: 20px;
   }
 }
 .pros-grid {
@@ -703,10 +714,13 @@ img {
     flex-direction: column;
     align-items: center;
   }
-  .pros-grid h2,
   .pros-grid h3,
+  .pros-grid h4,
   .pros-grid p {
     text-align: center;
+  }
+  .pros-grid p {
+    max-width: 400px;
   }
 }
 .faq {
@@ -740,11 +754,10 @@ img {
   font-size: 15px;
   line-height: 1.6;
   max-height: 0;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.5s;
 }
 .faq .questions .question.show p {
   max-height: 160px;
-  transition: max-height 0.3s ease-in;
 }
 .faq a {
   margin-top: 48px;
