@@ -21,6 +21,21 @@
         padding: $margin.medium
         max-width: 100%
 
+        a.wrapper
+            margin-top: 24px
+            display: flex
+            align-items: center
+            img, svg
+                width: 40px
+            p
+                margin-left: 12px
+            &:hover
+                svg
+                    fill: lighten($black, 40%)
+                    stroke: lighten($black, 40%)
+                p
+                    color: lighten($black, 40%)
+
         .logo-close
             display: flex
             justify-content: space-between

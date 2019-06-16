@@ -776,6 +776,25 @@ img {
   padding: 32px;
   max-width: 100%;
 }
+.modal .content a.wrapper {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+.modal .content a.wrapper img,
+.modal .content a.wrapper svg {
+  width: 40px;
+}
+.modal .content a.wrapper p {
+  margin-left: 12px;
+}
+.modal .content a.wrapper:hover svg {
+  fill: #666;
+  stroke: #666;
+}
+.modal .content a.wrapper:hover p {
+  color: #666;
+}
 .modal .content .logo-close {
   display: flex;
   justify-content: space-between;
