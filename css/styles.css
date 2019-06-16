@@ -8,7 +8,8 @@ p,
 a,
 button,
 input,
-label {
+label,
+textarea {
   color: #000;
   font-weight: 400;
   margin: 0;
@@ -18,7 +19,8 @@ p,
 a,
 button,
 input,
-label {
+label,
+textarea {
   font-family: 'Montserrat', sans-serif;
 }
 h1,
@@ -81,31 +83,40 @@ a.button:hover {
     margin-top: 12px;
   }
 }
-input {
+input,
+textarea {
   display: block;
   outline: none;
   border: 1px #808080 solid;
   border-radius: 4px;
   padding: 8px 12px;
 }
-input:focus {
+input:focus,
+textarea:focus {
   border-color: #00d802;
 }
-input[type='submit'] {
+input[type='submit'],
+textarea[type='submit'] {
   background-color: transparent;
+}
+textarea {
+  resize: vertical;
+}
+label {
+  display: inline-block;
 }
 * {
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
+  width: 100vw;
 }
 body {
   margin: 0;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  width: 100vw;
   overflow-x: hidden;
 }
 img {
@@ -283,6 +294,9 @@ img {
 }
 .white-background .markdown .wrapper .item:last-child {
   margin-right: 0;
+}
+.white-background .markdown .double-buttons {
+  justify-content: flex-start;
 }
 .white-background .heading-subheading h2 {
   font-size: 44px;
@@ -748,28 +762,94 @@ img {
   display: none;
   justify-content: center;
   align-items: center;
+  padding: 32px 16px;
+  overflow-y: auto;
 }
 .modal.show {
   display: flex;
 }
 .modal .content {
+  margin: auto;
   position: relative;
   background-color: #fff;
   border-radius: 12px;
   padding: 32px;
+  max-width: 100%;
 }
-.modal .content svg {
+.modal .content .logo-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal .content .logo-close img {
+  width: 60px;
+}
+.modal .content .logo-close svg {
   width: 16px;
 }
-.modal .content svg:hover {
+.modal .content .logo-close svg:hover {
   cursor: pointer;
   fill: #333;
 }
-.modal .content label {
-  display: inline-block;
-  font-size: 15px;
-  margin-top: 12px;
+.modal .content h2 {
+  margin-top: 40px;
+  color: #00d802;
 }
-.modal .content input {
-  display: block;
+.modal .content form {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+.modal .content form label,
+.modal .content form input,
+.modal .content form textarea {
+  font-size: 18px;
+  line-height: 1.2;
+}
+.modal .content form input,
+.modal .content form textarea {
+  width: 100%;
+  max-width: 400px;
+}
+.modal .content form textarea {
+  min-height: 140px;
+}
+.modal .content form .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal .content form .wrapper p {
+  font-size: 10px;
+}
+.modal .content form .container {
+  max-width: 100%;
+}
+.modal .content form input[type='submit'] {
+  font-family: 'Baloo', cursive;
+}
+.modal .content form input[type='submit']:hover {
+  cursor: pointer;
+  background-color: #00d802;
+  border-color: #00d802;
+  color: #fff;
+}
+@media (max-width: 575px) {
+  .modal .content {
+    padding: 16px;
+  }
+  .modal .content form {
+    grid-template-columns: minmax(100%, 400px);
+    grid-gap: 4px;
+  }
+  .modal .content form label,
+  .modal .content form input,
+  .modal .content form textarea {
+    font-size: 16px;
+  }
+  .modal .content form input,
+  .modal .content form textarea {
+    margin-bottom: 12px;
+  }
 }

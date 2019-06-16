@@ -8,23 +8,78 @@
     display: none
     justify-content: center
     align-items: center
+    padding: $margin.medium $margin.small
+    overflow-y: auto;
     &.show
         display: flex
+
     .content
+        margin: auto
         position: relative
         background-color: $white
         border-radius: 12px
         padding: $margin.medium
-        svg
-            width: 16px
-            &:hover
-                cursor: pointer
-                fill: lighten($black, 20%)
+        max-width: 100%
 
-        label
-            display: inline-block
-            font-size: 15px
+        .logo-close
+            display: flex
+            justify-content: space-between
+            align-items: center
+            img
+                width: 60px
+            svg
+                width: 16px
+                &:hover
+                    cursor: pointer
+                    fill: lighten($black, 20%)
+
+        h2
+            margin-top: 40px
+            color: $green
+
+        form
             margin-top: 12px
+            display: grid
+            grid-template-columns: auto auto
+            grid-gap: 20px
 
-        input
-            display: block
+            label, input, textarea
+                font-size: 18px
+                line-height: 1.2
+
+            input, textarea
+                width: 100%
+                max-width: 400px
+
+            textarea
+                min-height: 140px
+
+            .wrapper
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                p
+                    font-size: 10px
+            .container
+                max-width: 100%
+
+            input[type='submit']
+                font-family: $header-font
+                &:hover
+                    cursor: pointer
+                    background-color: $green
+                    border-color: $green
+                    color: $white
+
+    @media(max-width: $media.small)
+        .content
+            padding: $margin.small
+            form
+                grid-template-columns: minmax(100%, 400px)
+                grid-gap: 4px
+                label, input, textarea
+                    font-size: 16px
+
+                input, textarea
+                    margin-bottom: 12px
