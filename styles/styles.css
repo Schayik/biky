@@ -332,6 +332,9 @@ img {
     margin-bottom: 0;
   }
 }
+.background-image.header .opacity-layer {
+  opacity: 0.1;
+}
 .background-image.header .section.content {
   min-height: 100vh;
   padding-top: 140px;
@@ -755,6 +758,15 @@ img {
   line-height: 1.6;
   max-height: 0;
   transition: max-height 0.5s;
+}
+.faq .questions .question p a {
+  display: inline-block;
+  color: #00d802;
+  font-weight: 600;
+  margin-top: 0;
+}
+.faq .questions .question p a:hover {
+  color: #00c202;
 }
 .faq .questions .question.show p {
   max-height: 160px;

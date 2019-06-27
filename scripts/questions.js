@@ -2,6 +2,10 @@
 const questions = Array.from(document.getElementById('questions').children)
 let openQuestion = null
 
+questions.map(questions => {
+  questions.classList.remove('show')
+})
+
 const handleChange = index => {
   if (openQuestion !== null) {
     questions[openQuestion].classList.remove('show')
@@ -20,15 +24,3 @@ questions.map((question, index) => {
     handleChange(index)
   })
 })
-
-const modal = document.getElementById('modal')
-
-const openModal = () => {
-  document.body.style.overflow = 'hidden'
-  modal.classList.add('show')
-}
-
-const closeModal = () => {
-  document.body.style.overflow = ''
-  modal.classList.remove('show')
-}

@@ -3,3 +3,13 @@ RewriteCond %{HTTPS} !on
 RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
 RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ /$1.html [L]
+
+Redirect /overheden /documents/Biky%20-%20Ieder%20kind%20op%20de%20fiets.pdf
+Redirect /privacy /documents/Biky%20-%20Privacybeleid.pdf
+Redirect /cookies /documents/Biky%20-%20Cookies%20beleid.pdf
+Redirect /algemene-voorwaarden /documents/Biky%20-%20Algemene%20Voorwaarden.pdf
