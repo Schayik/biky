@@ -394,6 +394,7 @@ img {
 .process-grid img {
   width: 140px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .process-grid h3 {
   color: #00d802;
@@ -441,10 +442,6 @@ img {
 }
 .process-grid .icon-3 {
   grid-area: icon-3;
-}
-.process-grid .icon-3 img {
-  width: 100%;
-  max-width: 300px;
 }
 .process-grid .text-1 {
   grid-area: text-1;
